@@ -1,27 +1,4 @@
 html body {
 
-	width: auto;
-	height: auto;
-	background-color: black;
-	margin: 2%;
 }
 
-#wrapper {
-	height: auto;
-	width: auto;
-	padding: 4%;
-	background-color: blue;
-}
-
-.headerBar {
-	width: auto;
-	height: 50px;
-	background-color: green;
-	margin: 0 0 .5% 0;
-}
-
-.mainBody {
-	width: auto;
-	height: 1000px;
-	background-color: red;
-}
