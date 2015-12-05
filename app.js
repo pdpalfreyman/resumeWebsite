@@ -1,25 +1,22 @@
 var app = angular.module('resume', ['ngRoute', 'firebase']);
 
+app.constant('fb', {
+	url: 'https://pdpresume.firebaseio.com/'
+});
+
 app.config(function($routeProvider){
 
 	$routeProvider
-		.when('/login', {
-			templateUrl: 'views/login.html',
-			controller: 'loginCtrl'
+		.when('/home', {
+			templateUrl: 'views/home.html',
+			controller: 'mainCtrl',
+			resolve: {
+				guestsRef: function(mainService){
+					return mainService.getGuests();
+				}
+			}
 		})
 		.otherwise({
-			redirectTo: '/login'
+			redirectTo: '/home'
 		})
-});
-
-app.run(function($rootScope, $location, authService) {
-	$rootScope.$on("$routeChangeStart", function(event, next, previous, error) {
-		var authRequired = null
-		if (next && next.$$route && next.$$route.authRequired){
-			authRequired = next.$$route.authRequired
-		}
-		if (authRequired && !authService.getAuth()) {
-	    	$location.path("/login");
-		}
-	});
 });

@@ -1,0 +1,7 @@
+<div class="jumbotron">
+	<div class="register">Please Sign My Guestbook!
+		<input placeholder="Name" ng-model="name" required></input>
+		<input placeholder="Company" ng-model="company" required></input>
+		<button ng-disabled="register.$invalid" ng-click="newGuest(name, company)">Sign In</button>
+	</div>
+</div>

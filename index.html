@@ -7,7 +7,13 @@
 
 </head>
 <body>
-
+	<!-- <div class="jumbotron">
+		<div class="register">Please Sign My Guestbook!
+			<input placeholder="Name" ng-model="name" required></input>
+			<input placeholder="Company" ng-model="company" required></input>
+			<button ng-disabled="register.$invalid" ng-click="newGuest(name, company)">Sign In</button>
+		</div>
+	</div> -->
 	<div class='container' ng-view></div>
 
 
@@ -26,6 +32,7 @@
 	<script src="app.js"></script>
 	<script src="mainService.js"></script>
 	<script src="views/authService.js"></script>
-	<script src="views/loginCtrl.js"></script>
+	<script src="views/homeCtrl.js"></script>
+	<script src="mainCtrl.js"></script>
 </body>
 </html>
